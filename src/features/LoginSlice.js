@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const loginAPI = createAsyncThunk('/login',async(value)=>{
     try {
-        const url = 'http://localhost:5500/login';
+        const url = 'https://backend-l1zu.onrender.com/login';
     const response = await fetch(url,{
         method:'POST',
         headers:{

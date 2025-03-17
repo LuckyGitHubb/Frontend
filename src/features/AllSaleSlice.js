@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const AllSaleAPI = createAsyncThunk('/allSale',async(value)=>{
     const currPage = value?.currentPage
     try {
-        let url= `http://localhost:5500/sale/getAll?page=${currPage}&limit=${3}`
+        let url= `https://backend-l1zu.onrender.com/sale/getAll?page=${currPage}&limit=${3}`
         const token = localStorage.getItem('token');
         let response = await fetch(url,{
             method:'GET',

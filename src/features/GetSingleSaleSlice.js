@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const getSingleSaleAPI = createAsyncThunk('',async(id)=>{
     const token = localStorage.getItem('token');
     console.log('this is my id ',id);
-    const url = `http://localhost:5500/sale/get?id=${id}`;
+    const url = `https://backend-l1zu.onrender.com/sale/get?id=${id}`;
     const response = await fetch(url,{
         method:'GET',
         headers:{

@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const addEmployeeAPI = createAsyncThunk('/employee',async(value)=>{
     try {
         const token = localStorage.getItem('token');
-        const url = 'http://localhost:5500/employee';
+        const url = 'https://backend-l1zu.onrender.com/employee';
         const response = await fetch(url,{
         method:'POST',
         headers:{

@@ -4,7 +4,7 @@ export const addPojectAPI = createAsyncThunk('/addproject',async(value)=>{
     try {
         
         const token = localStorage.getItem('token');
-        const url = 'http://localhost:5500/project/post';
+        const url = 'https://backend-l1zu.onrender.com/project/post';
         const response = await fetch(url,{
             method:'POST',
             headers:{

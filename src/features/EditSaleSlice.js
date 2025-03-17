@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const editSaleAPI = createAsyncThunk('/edit/Sale',async(value)=>{
     try {
-        const url ='http://localhost:5500/sale/update';
+        const url ='https://backend-l1zu.onrender.com/sale/update';
     const token = localStorage.getItem('token');
     const response = await fetch(url,{
         method:'POST',

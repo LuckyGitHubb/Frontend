@@ -5,7 +5,7 @@ export const getSingleProductAPI = createAsyncThunk('',async(value)=>{
     const token = localStorage.getItem('token');
     const id = value
     // console.log('THIS IS MUY ID SO PLEASE DONT TOUCH IT ',id)
-    const url = `http://localhost:5500/product/get?id=${id}`;
+    const url = `https://backend-l1zu.onrender.com/product/get?id=${id}`;
     const response = await fetch(url,{
         method:'GET',
         headers:{

@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const allEmployeeAPI = createAsyncThunk('/employee',async(value)=>{
-    let url = value?.currentPage? `http://localhost:5500/employee/getAll?page=${value.currentPage}&limit=${3}` :
-     `http://localhost:5500/employee/getAll`
+    let url = value?.currentPage? `https://backend-l1zu.onrender.com/employee/getAll?page=${value.currentPage}&limit=${3}` :
+     `https://backend-l1zu.onrender.com/employee/getAll`
     try {
         const token = localStorage.getItem('token'); 
         let response = await fetch(url,{

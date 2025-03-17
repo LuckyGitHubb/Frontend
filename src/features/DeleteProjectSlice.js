@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const deleteProjectAPI = createAsyncThunk('/delete/project',async(id)=>{
     try {
-        const url ='http://localhost:5500/project/delete';
+        const url ='https://backend-l1zu.onrender.com/project/delete';
     const token = localStorage.getItem('token');
     const response = await fetch(url,{
         method:'DELETE',

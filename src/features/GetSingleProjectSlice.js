@@ -6,7 +6,7 @@ export const getSingleProjectAPI = createAsyncThunk('',async(id)=>{
     console.log('this is my id ',id);
     // const id = value.id
     // console.log('THIS IS MUY ID SO PLEASE DONT TOUCH IT ',id)
-    const url = `http://localhost:5500/project/get?id=${id}`;
+    const url = `https://backend-l1zu.onrender.com/project/get?id=${id}`;
     const response = await fetch(url,{
         method:'GET',
         headers:{

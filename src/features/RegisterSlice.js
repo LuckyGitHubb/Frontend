@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const registerAPI = createAsyncThunk('/register',async(value)=>{
     try {
-        const url = 'http://localhost:5500/register';
+        const url = 'https://backend-l1zu.onrender.com/register';
     const response = await fetch(url,{
         method:'POST',
         headers:{

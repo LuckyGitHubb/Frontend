@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const editEmployeeAPI = createAsyncThunk('',async(value)=>{
     try {
-        const url ='http://localhost:5500/employee/update';
+        const url ='https://backend-l1zu.onrender.com/employee/update';
     const token = localStorage.getItem('token');
     const response = await fetch(url,{
         method:'POST',

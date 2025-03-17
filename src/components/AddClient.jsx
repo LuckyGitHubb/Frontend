@@ -40,7 +40,7 @@ function AddClient() {
           </Grid>
 
           <Grid item xs={6}>
-            <TextField fullWidth label="Mobile" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+            <TextField fullWidth label="Mobile" type="number" min="1" max="10" value={phone} onChange={(e) => setPhone(e.target.value)} required />
           </Grid>
           <Grid item xs={6}>
             <TextField fullWidth label="City" value={address} onChange={(e) => setAddress(e.target.value)} required />

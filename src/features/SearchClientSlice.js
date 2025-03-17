@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const searchClientAPI = createAsyncThunk('',async(value)=>{
     try {
-        const url = `http://localhost:5500/client/search?search=${value}`;
+        const url = `https://backend-l1zu.onrender.com/client/search?search=${value}`;
         console.log('my value ',value,' or My value length is ',value.length);
         const token = localStorage.getItem('token');
         const response = await fetch(url,{

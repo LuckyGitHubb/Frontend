@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const AllProjectAPI = createAsyncThunk('/allProject',async(page)=>{
-    let url = page?.currentPage? `http://localhost:5500/project/getAll?page=${page.currentPage}&limit=${3}` :
-                `http://localhost:5500/project/getAll`
+    let url = page?.currentPage? `https://backend-l1zu.onrender.com/project/getAll?page=${page.currentPage}&limit=${3}` :
+                `https://backend-l1zu.onrender.com/project/getAll`
     try {
         const token = localStorage.getItem('token');
             let response = await fetch(url,{

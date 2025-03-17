@@ -4,7 +4,7 @@ export const deleteEmployeeAPI = createAsyncThunk('/employee',async(value)=>{
     try {
         console.log('the id is: ',value.id);
         const token = localStorage.getItem('token');
-        let url = 'http://localhost:5500/employee/delete';
+        let url = 'https://backend-l1zu.onrender.com/employee/delete';
         let response = await fetch(url,{
             method:'DELETE',
             headers:{

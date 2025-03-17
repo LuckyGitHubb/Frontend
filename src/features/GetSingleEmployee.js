@@ -5,7 +5,7 @@ export const getSingleEmployeeAPI = createAsyncThunk('',async(value)=>{
     const token = localStorage.getItem('token');
     const id = value.id
     // console.log('THIS IS MUY ID SO PLEASE DONT TOUCH IT ',id)
-    const url = `http://localhost:5500/employee/get?id=${id}`;
+    const url = `https://backend-l1zu.onrender.com/employee/get?id=${id}`;
     const response = await fetch(url,{
         method:'GET',
         headers:{

@@ -4,7 +4,7 @@ export const addSaleAPI = createAsyncThunk('/addSale',async(value)=>{
     try {
         
         const token = localStorage.getItem('token');
-        const url = 'http://localhost:5500/sale/post';
+        const url = 'https://backend-l1zu.onrender.com/sale/post';
         const response = await fetch(url,{
             method:'POST',
             headers:{

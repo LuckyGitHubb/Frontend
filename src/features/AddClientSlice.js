@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const addClientAPI = createAsyncThunk('client',async(value)=>{
+    // let url =
     try {
         const token = localStorage.getItem('token');
-        const url = 'http://localhost:5500/client/post';
+        const url = 'https://backend-l1zu.onrender.com/client/post';
         const response = await fetch(url,{
         method:'POST',
         headers:{
